@@ -1,0 +1,594 @@
+
+/* base styles, feel free to edit */
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 1em;
+    min-height: 100%;
+    color: grey;
+}
+
+/* UNMODIFIED */
+/* HEADER */
+.banner {
+    font-family: Libre Baskerville, cursive;
+    font-size: 24px;
+    background-color: white;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    padding: 10px;
+    min-height: 60px;
+
+    position: fixed;
+    top: 0px;
+    width: 100%;
+    z-index: 10;
+    color: #6B626C;
+}
+
+/* Sign in */
+
+.form-border { 
+    border: 4px solid #847B8D;
+    border-radius: 4px;
+}
+
+.form-signin {
+    top: 120px;
+    position: relative;
+    width: 100%;
+    max-width: 300px;
+    text-align: center!important;
+    
+    border-radius: 4px;
+    border-top: 2px solid white;
+    border-bottom: 2px solid #847B8D;
+    border-left: 2px solid #E7D4F4; 
+    border-right: 2px solid #A38DB5;
+
+    margin: 20px; margin-left:auto; margin-right:auto;
+}
+
+.strip { 
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 14px;
+    background: linear-gradient(to right, #847B8D, #D0A7C9);
+    padding: 6px 2px 8px 0px;
+    color: white;
+ }
+
+
+ .strip-dark { 
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 14px;
+    background: linear-gradient(to right, #5C597B, #8E4F82);
+    padding: 6px 2px 8px 0px;
+    color: white;
+    cursor: pointer;
+    letter-spacing: 2px;
+ }
+
+.strip-blank { 
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 14px;
+    padding: 2px; padding-top: 8px;
+    color: white;
+    cursor: pointer;
+    letter-spacing: 2px;
+ }
+
+
+input {
+    font-family: "IMB Plex Mono", monospace;
+    font-size: 14px;
+    display: block;
+    width: 75%;
+    padding: .375rem .75rem;
+    color: #495057;
+    background-color: white;
+    background-clip: padding-box;
+    border: 2px dotted rgba(0,0,0,.0975);
+    border-radius: .10rem;
+    margin: 10px;
+    margin-left:auto; margin-right:auto;
+    cursor: auto;
+}
+
+.square { 
+    width: 16px; 
+    height: 16px; 
+
+    border-top: 2px solid white;
+    border-bottom: 2px solid #847B8D;
+    border-left: 2px solid #E7D4F4; 
+    border-right: 2px solid #A38DB5;
+
+    float: right; 
+    margin-right: 2px; 
+    text-align: center;
+    padding: 1px;
+
+  }
+
+
+button {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 12px;
+    display: inline-block;
+    font-weight: 400;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    padding: .375rem .75rem;
+    line-height: 1.5;
+    color: black;
+    margin: 10px;
+
+    border-radius: 4px;
+    border-top: 2px solid white;
+    border-bottom: 2px solid #847B8D;
+    border-left: 2px solid #E7D4F4; 
+    border-right: 2px solid #A38DB5;
+    background-color: white;
+    cursor: pointer;
+}
+
+button:focus {outline:0;}
+
+/* USER PROFILE */
+.user-profile {
+    max-width: 640px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    min-height: 60px;
+    border: 1px solid rgba(0,0,0,.0975);
+    margin-left:auto;
+    margin-right:auto;
+}
+
+
+/* POSTS */
+.post {
+    top: 120px;
+    position: relative;
+    width: 100%;
+    max-width: 360px;
+    text-align: center!important;
+    
+    border-radius: 4px;
+    border-top: 2px solid white;
+    border-bottom: 2px solid #847B8D;
+    border-left: 2px solid #E7D4F4; 
+    border-right: 2px solid #A38DB5;
+    background-color: #E6DDE9;
+
+    margin: 20px; margin-left:auto; margin-right:auto;
+}
+
+img { 
+    max-width:100%;
+    max-height:100%;
+    border-radius: 10px;
+}
+
+
+.post-image { 
+    margin-top:10px;
+    max-width: 96%;
+ }
+
+.post-text { 
+    text-align: left;
+    margin: 10px;
+    font-size: 10pt;
+    padding: 10px; padding-top: 0px; padding-bottom: 0px;
+    background-color: white;
+    border: 2px dotted grey;
+    border-radius: 10px
+}
+
+
+/* LIKE AND COMMENT POPUPS */
+
+.invisible-button { 
+    position: absolute;
+    border: none;
+    background-color: rgba(0,0,0,0);
+    top: 2px;
+    right:8px;
+    width: 44px;
+    height: 18px;
+    z-index: 16;
+    cursor: pointer;
+    margin: 0px;
+ }
+
+
+.popup { 
+    /* always the same position on the post*/
+    width: 284px;
+    height:417px;
+    /* absolute means relative to parent */
+    position: absolute; 
+    bottom: 0px; left: -300px;
+    z-index: 5;
+
+    top: 0px;
+
+    /* based on boundaries of image */
+    text-align: left;
+    font-family: 'IBM Plex Mono', monospace;
+    color: #4A444A;
+
+    background-image: url(../images/frames/frame1.png);
+    background-repeat: no-repeat;
+    display: none; 
+
+}
+
+.popup-right { 
+    /* always the same position on the post*/
+    width: 284px;
+    height:417px;
+    /* absolute means relative to parent */
+    position: absolute; 
+    bottom: 0px; right: -300px;
+    z-index: 5;
+    top: 0px;
+    /* based on boundaries of image */
+    text-align: left;
+    font-family: 'IBM Plex Mono', monospace;
+    color: #4A444A;
+
+    background-image: url(../images/frames/frame1.png);
+    background-repeat: no-repeat;
+
+    overflow: hidden;
+    display: none; 
+}
+
+.meta-button { 
+    margin: 0px; margin-right: 10px;
+    border: 2px dotted rgba(0,0,0,.0975);
+    cursor: pointer;
+    font-family: "Source Sans Pro", "Sans-Serif"; 
+    font-size: 10pt;
+}
+
+.meta-data { 
+    font-family: "Source Sans Pro", "Sans-Serif"; 
+    font-size: 10pt;
+    color: black;
+    margin-top: 50px;
+    padding-left: 80px;
+    padding-right: 24px;
+    padding-top: 20px;
+    margin-bottom: 100px;
+    max-height: 260px;
+    overflow-y: scroll;
+}
+
+
+.meta-data::-webkit-scrollbar { 
+    display: none; 
+}
+
+.top-meta-data { 
+    font-family: Libre Baskerville, cursive;
+    font-size: 16pt;
+    font-weight: 1800;
+    color: black;
+}
+
+/* Like Button */
+.pixel-love { 
+    background-image: url("../images/other/glass_heart_grey.png"); 
+    float: right;
+    background-color: rgba(0,0,0,0);
+    background-size: cover;
+    min-width: 40px;
+    min-height: 35px;
+    border: none;
+    position: absolute;
+    bottom: 75px;
+    left: -60px;
+}
+
+/* New Image Posts */
+
+.image-preview { 
+    position: absolute;
+    max-width: 90%;
+    max-height: 90%;
+    min-height: 360px;
+    border-radius: 10px;
+    border: 2px dotted grey;
+    margin: 0px;
+    padding: 10px; padding-right: 20px; padding-left: 20px;
+    text-align: center;
+
+}
+
+.upload-button { 
+    font-family: 'IBM Plex Mono', monospace;
+    cursor: pointer;
+}
+
+/* User profiles */
+
+.profile { 
+    /* always the same position on the post*/
+    width: 381px;
+    height:279px;
+
+    top: 120px;
+    position: relative;
+    margin-left: auto; margin-right: auto;
+    z-index: 5;
+
+    /* based on boundaries of image */
+    text-align: left;
+    font-family: 'IBM Plex Mono', monospace;
+    color: #4A444A;
+
+    background-image: url(../images/frames/frame3.png);
+    background-repeat: no-repeat;
+
+    padding-left: 30px;
+    padding-top: 60px;
+    padding-bottom: 20px;
+    padding-right: 50px;
+}
+
+
+.profile-data { 
+    font-family: "Source Sans Pro", "Sans-Serif"; 
+    font-size: 11pt;
+    color: black;
+    line-height: 60%;
+}
+
+.top-button { 
+    float: right;
+    right: 10px;
+    position: relative;
+    top: 20px;
+    height: 10%;
+    background-color: #F4F0F4;
+    float: right;
+}
+
+
+.searchbar { 
+    height: 30px;
+    max-width: 200px;
+    padding: 0px; padding-right: 5px;
+    top: 20px;
+    position: relative;
+}
+
+.followlist { 
+    /* always the same position on the post*/
+    width: 284px;
+    height:417px;
+    /* absolute means relative to parent */
+    position: absolute; 
+    bottom: 0px; left: -300px;
+    z-index: 5;
+
+    top: 0px;
+
+    /* based on boundaries of image */
+    text-align: left;
+    font-family: 'IBM Plex Mono', monospace;
+    color: #4A444A;
+
+    background-image: url(../images/frames/frame1.png);
+    background-repeat: no-repeat;
+}
+
+
+/* FOR POSTING NEW COMMENTS */
+.popup-bottom { 
+    /* always the same position on the post*/
+    width: 359px;
+    height:271px;
+
+    
+    position: absolute; 
+    /*so it is relative and moves with the post section*/
+    margin: 0;
+    margin-left: auto; margin-right: auto;
+    bottom: 0px; right: -400px; top: 300px;
+    z-index: 5;
+
+    /* based on boundaries of image */
+    text-align: left;
+    font-family: 'IBM Plex Mono', monospace;
+    color: #4A444A;
+
+    background-image: url(../images/frames/commentframe3.jpg);
+    background-repeat: no-repeat;
+    padding: 0px;
+    border: none;
+    display: none;
+}
+
+
+.comment-text { 
+    margin: 0px; margin-left: 0px;
+    margin-right: 24px; margin-left: 30px;
+    margin-top: 66px; margin-bottom: 47px;
+    background-color: rgba(0,0,0,0);
+    box-sizing: border-box;
+    height: 150px; width: 296px;
+    font-family: 'IBM Plex Mono', monospace;
+    border: 2px dotted rgba(0,0,0,.0975);
+    font-size: 14px;
+    color: black;
+}
+
+.comment-button { 
+    position: absolute;
+    bottom:4px;
+    right:8px;
+}
+
+
+/* FOR DIALOGUE UPDATES */
+.update {
+    top: 120px;
+    position: relative;
+    width: 100%;
+    max-width: 300px;
+    text-align: center!important;
+    
+    border-radius: 4px;
+    border-top: 2px solid white;
+    border-bottom: 2px solid #847B8D;
+    border-left: 2px solid #E7D4F4; 
+    border-right: 2px solid #A38DB5;
+    float: right;
+    margin-top: 20px; margin-bottom: 20px;
+    margin-right: 10%;
+    background-image: url("../images/tiles/marble2.jpg");
+}
+
+
+.button-follow { 
+    position: absolute;
+    right: -60px;
+}
+
+
+textarea { 
+    width: 90%;
+    height:200px;
+    margin: 0px;
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 14px;
+
+}
+textarea:focus {outline:0;}
+
+/* Unused */
+footer {
+    border-top: 1px solid rgba(0,0,0,.0975);
+    padding: 10px;
+    background-color:white;
+    min-height: 60px;
+    text-align: right;
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+    z-index: 10;
+}
+
+.banner > *, footer > * {
+    margin: 10px 25px;
+}
+
+
+@media screen and (max-width: 500px) {
+    .post {
+        border: none;
+        border-bottom: 1px solid rgba(0,0,0,.0975);
+        border-top: 1px solid rgba(0,0,0,.0975); 
+        max-height: 60vh;
+    }
+
+    .post-image {
+        max-width: 100%;
+        max-height: 60vh;
+    }
+
+    #feed > * {
+        flex: 1 1 45%;
+        height: auto;
+    }
+}
+
+/* Add your styles here */
+
+/* For opening a box of likes */
+.likebox { 
+}
+
+
+.message { 
+    text-align: center;
+ }
+
+
+.notify { 
+    background-image: url(../images/frames/frame4.jpg);
+    background-repeat: no-repeat;
+    width: 239px;
+    height: 161px;
+    position: absolute;
+    right: 90px;
+    top: 50px;
+    text-align: center;
+}
+
+.notify-text { 
+    padding-left: 20px; padding-right: 35px;
+    padding-top: 50px; padding-bottom: 40px;
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 14px;
+}
+
+.edit-button { 
+    background-color: #827680; 
+    height: 32px;
+    color: white;
+    cursor: pointer;
+    font-family: "Source Sans Pro", "Sans-Serif"; 
+    font-size: 10pt;
+    margin: 0px; margin-left: 10px; margin-right: 10px;
+    border: none;
+    float: right;
+}
+
+
+/* Checlist */
+
+
+h1 { 
+    font-family: 'Roboto', sans-serif;
+    font-size: 2em;
+}
+
+
+li { 
+    font-size: 1em;
+}
+
+
+.fa-square { 
+    float: left;
+}
+
+.fa-check-square { 
+    float: left;
+}
+
+.fa-edit { 
+    float: right;
+}
+
+.far {
+    cursor: pointer;
+}
+

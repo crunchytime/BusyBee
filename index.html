@@ -1,73 +1,70 @@
-<!DOCTYPE html>
-<html ng-app="Busy Bee App">
-<head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>Busy Bee</title>
-	<link href="css/bootstrap.min.css" rel="stylesheet">
-</head>
+<!doctype html>
+<html lang="en" ng-app="Busy Bee App">
+    <head>
+        <!-- Required meta tags -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <!-- CSS -->
 
 
 
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans|Roboto" rel="stylesheet">
+        <link rel="stylesheet" href="css/bootstrap.min.css">
+        <link rel="stylesheet" href="css/busybee.css">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+        
+        <title>Busy Bee | maximise your productivity</title>
+    </head>
 
 
-<body>
-<nav class="navbar navbar-inverse">
-    <div class="container-fluid">
-        <div class="navbar-header">
-            <a class="navbar-brand" href="#">
-                <span class="glyphicon glyphicon-apple" style="color:#5bdb48">
-                </span>
-                Grocery List
-            </a>
+
+    <body>
+        <!-- NAVIGATION BAR -->
+        
+        <nav class="navbar navbar-light bg-light">
+            <a class="navbar-brand" href="#"> BusyBee </a>
+        </nav>
+
+        
+        <!-- the container makes it thickly padded -->
+        <div class="container">
+            <h1> Your BusyBee Checklist </h1>
+            <ul class="list-group">
+
+                <li class="list-group-item text-center">
+                    <i class="far fa-square"></i> <!-- using a <span> element to reference the icon -->
+                    <span> Webcomic Storyline </span>
+                    <i class="far fa-edit"></i>
+                </li>
+
+                <li class="list-group-item text-center">
+                    <i class="far fa-square"></i> <!-- using a <span> element to reference the icon -->
+                    <span> Webcomic Banner </span>
+                    <i class="far fa-edit"></i>
+                </li>
+
+                <li class="list-group-item text-center">
+                    <i class="far fa-square"></i> <!-- using a <span> element to reference the icon -->
+                    <span>Webcomic Title</span>
+                    <i class="far fa-edit"></i>
+                </li>
+
+                <li class="list-group-item text-center">
+                    <i class="far fa-check-square"></i> <!-- using a <span> element to reference the icon -->
+                    <span> Growth Groups</span>
+                    <i class="far fa-edit"></i>
+                </li>
+            </ul>
         </div>
-    </div>
-</nav>
-
-
-
-<div class="container">
-    <div class="col-xs-12">
-        <ul class="list-group">
-            <li class="list-group-item text-center clearfix">
-                <button type="button" class="btn btn-sm btn-success pull-left">
-                    <span class="glyphicon glyphicon-unchecked"></span>
-                </button>
-                <span style="font-weight:bold">Item 1</span>
-                <button type="button" class="btn btn-sm btn-default pull-right">
-                    <span class="glyphicon glyphicon-pencil"></span>
-                </button>
-            </li>
-            <li class="list-group-item text-center clearfix">
-                <button type="button" class="btn btn-sm btn-success pull-left">
-                    <span class="glyphicon glyphicon-unchecked"></span>
-                </button>
-                <span style="font-weight:bold">Item 2</span>
-                <button type="button" class="btn btn-sm btn-default pull-right">
-                    <span class="glyphicon glyphicon-pencil"></span>
-                </button>
-            </li>
-            <li class="list-group-item text-center clearfix">
-                <button type="button" class="btn btn-sm btn-success pull-left">
-                    <span class="glyphicon glyphicon-unchecked"></span>
-                </button>
-                <span style="font-weight:bold">Item 3</span>
-                <button type="button" class="btn btn-sm btn-default pull-right">
-                    <span class="glyphicon glyphicon-pencil"></span>
-                </button>
-            </li>
-        </ul>
-    </div>
-</div>
 
 
 
 
-<script src="lib/jquery.min.js"></script>
-<script src="lib/bootstrap.min.js"></script>
-<script src="lib/angular.min.js"></script>
-<script src="js/app.js"></script>
-</body>
 
+        <!-- Optional JavaScript -->
+        <script src="lib/jquery.min.js"></script>
+        <script src="lib/bootstrap.min.js"></script>
+        <script src="lib/angular.min.js"></script>
+        <script src="js/app.js"></script>
+    </body>
 </html>
